@@ -121,3 +121,21 @@ header {
 	color: #ffffff;
 	font-size: 14px;
 }
+
+.menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+}
+
+.menu__link {
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #222222;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding: 20px;
+}
