@@ -175,6 +175,70 @@ header {
 	text-transform: uppercase;
 	line-height: 31px
 }
+
 .promo__text span {
 	color: #f16d7f;
+}
+
+.intro-flex {
+	display: flex;
+	justify-content: space-between;
+}
+
+.intro__block {
+	width: 560px;
+	margin-top: 98px;
+	margin-bottom: 100px;
+}
+
+.top__left {
+	height: 542px;
+	background-image: url(img/intro_man.jpg);
+	margin-bottom: 20px;
+}
+
+.bottom__left {
+	height: 261px;
+	background-color: #dadad2;
+	background-image: url(img/intro_purse.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.top__right {
+	height: 261px;
+	background-color: #dadad2;
+	background-image: url(img/intro_women.jpg);
+	background-repeat: no-repeat;
+	background-position: right;
+	margin-bottom: 20px;
+}
+
+.bottom__right {
+	height: 542px;
+	background-image: url(img/intro_kids.jpg);
+}
+.intro__text {
+	float: left;
+	padding: 16px;
+	background-color: #fff;
+	margin-top: 26px;
+}
+.intro__text h4 {
+	color: #222222;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.45px;
+	padding-top: 5px;
+	line-height: 10px;
+	margin-bottom: 10px;
+}
+.intro__text h3 {
+	color: #f16d7f;
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+	line-height: 20px;
 }
