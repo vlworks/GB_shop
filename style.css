@@ -218,12 +218,14 @@ header {
 	height: 542px;
 	background-image: url(img/intro_kids.jpg);
 }
+
 .intro__text {
 	float: left;
 	padding: 16px;
 	background-color: #fff;
 	margin-top: 26px;
 }
+
 .intro__text h4 {
 	color: #222222;
 	font-size: 18px;
@@ -234,6 +236,7 @@ header {
 	line-height: 10px;
 	margin-bottom: 10px;
 }
+
 .intro__text h3 {
 	color: #f16d7f;
 	font-size: 30px;
@@ -241,4 +244,59 @@ header {
 	text-transform: uppercase;
 	letter-spacing: 0.75px;
 	line-height: 20px;
+}
+
+.fetured__text {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+.fetured__text h1 {
+	color: #222222;
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 0.75px;
+}
+
+.fetured__text p {
+	color: #9f9f9f;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.35px;
+}
+.fetured__box {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 39px;
+}
+.fetured__block {
+	width: 261px;
+}
+.fetured__block:hover {
+	box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+	background-color: #ffffff;
+}
+
+.fetured__block img {
+	margin-bottom: 20px;
+}
+.title {
+	color: #222222;
+	font-size: 13px;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin-bottom: 17px;
+	margin-left: 14px;
+	line-height: 13px;
+}
+
+.cost {
+	color: #f16d7f;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-left: 14px;
+	line-height: 16px;
+	margin-bottom: 21px;
 }
