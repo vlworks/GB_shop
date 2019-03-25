@@ -300,3 +300,12 @@ header {
 	line-height: 16px;
 	margin-bottom: 21px;
 }
+.browse-all {
+	margin-top: 38px;
+	margin-bottom: 113px;
+	display: flex;
+	justify-content: center;
+}
+.browse-all i {
+	margin-left: 9px;
+}
