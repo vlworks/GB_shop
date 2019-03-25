@@ -301,11 +301,73 @@ header {
 	margin-bottom: 21px;
 }
 .browse-all {
-	margin-top: 38px;
-	margin-bottom: 113px;
+	margin-top: 28px;
+	margin-bottom: 60px;
 	display: flex;
 	justify-content: center;
 }
 .browse-all i {
 	margin-left: 9px;
+}
+.introF {
+	margin-bottom: 97px;
+}
+.introF__left {
+	height: 529px;
+	width: 767px;
+	background-image: url(img/introF_bg.jpg);
+}
+.introF__right {
+	height: 529px;
+	width: 373px;
+	background-color: #222224;
+}
+.introF__title {
+	float: left;
+	margin-top: 146px;
+	margin-left: 39px;;
+}
+.introF__title h1 {
+	color: #ffffff;
+	font-size: 54px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	line-height: 54px;
+}
+.introF__title span {
+	color: #f16d7f;
+}
+.introF__title h2 {
+	color: #ffffff;
+	font-size: 32px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.9px;
+	line-height: 32px;
+}
+.introF__block {
+	display: flex;
+	margin-left: 36px;
+	margin-top: 48px;
+}
+.introF__block__left img {
+	margin-right: 33px;
+}
+.introF__block__right {
+	margin-right: 33px;
+}
+.introF__block__right h1 {
+	color: #fbfbfb;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	margin-bottom: 10px;
+}
+.introF__block__right p {
+	color: #fbfbfb;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 24px;
+	letter-spacing: 0.35px;
 }
