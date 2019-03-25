@@ -7,10 +7,13 @@
 body {
 	font-family: 'Lato', sans-serif;
 }
-
-header {
+.mega-container {
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-	border: 1px solid #ececec;
+	width: 1600px;
+	margin: 0 auto;
+}
+header {
+	border-bottom: 1px solid #ececec;
 	background-color: #ffffff;
 	height: 100px;
 }
