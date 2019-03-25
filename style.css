@@ -50,7 +50,12 @@ header {
 .logo img {
 	margin-right: 13px;
 }
-
+.logo span {
+	color: #f16d7f;
+	font-size: 27px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
 .header__form {
 	display: flex;
 	align-items: center;
@@ -529,4 +534,51 @@ header {
 }
 .sub__search input,button:focus {
 	outline: none;
+}
+.preF__box {
+	display: flex;
+	justify-content: space-between;
+	align-items: top;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.preF__box__brand {
+	width: 428px;
+}
+
+.pref__box__brand p {
+	color: #898989;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 0.35px;
+}
+
+.preF__box__company {
+	
+}
+.ftitle {
+	color: #f16d7f;
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.45px;
+	margin-bottom: 25px;
+}
+.comp {
+	list-style-type: none;
+}
+.comp_link {
+	text-decoration: none;
+	color: #898989;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.4px;
+	line-height: 40px;
+}
+.preF__box__info {
+	
+}
+
+.preF__box__shop {
+	
 }
