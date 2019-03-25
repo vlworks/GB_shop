@@ -371,3 +371,64 @@ header {
 	line-height: 24px;
 	letter-spacing: 0.35px;
 }
+.sub {
+	background-image: url(img/sub_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 438px;
+	margin-bottom: 100px;
+}
+.sub__left {
+	display: flex;
+	align-items: center;
+	width: 570px;
+	height: 438px;;
+	border-right: 1px solid #ffffff;
+}
+.top__block {
+	display: flex;
+	justify-content: center;
+	width: 497px;
+}
+.top__block img {
+	margin-right: 28px;
+}
+.top__block p {
+	color: #222224;
+	font-size: 16px;
+	font-style: italic;
+	letter-spacing: 0.4px;
+	line-height: 28px;
+}
+.bottom__block__text {
+	margin-left: 110px;
+	margin-top: 19px;
+}
+.bottom__block__text h1 {
+	color: #f16d7f;
+	font-size: 16px;
+	font-weight: 700;
+}
+.bottom__block__text h2 {
+	color: #222224;
+	font-size: 12px;
+	font-weight: 300;
+	letter-spacing: 0.3px;
+}
+.bottom__line {
+	display: flex;
+	margin-top: 41px;
+	margin-left: 110px;
+}
+.left__line {
+	background-color: #d6d6d6;
+	width: 38px;
+	height: 4px;
+}
+
+.right__line {
+	background-color: #f16d7f;
+	width: 38px;
+	height: 4px;
+	margin-left: 13px;
+}
