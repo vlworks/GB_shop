@@ -89,6 +89,12 @@ header {
 	letter-spacing: 0.35px;
 	margin-left: -2px;
 }
+.form__search:focus {
+	outline: none;
+}
+.placeholder::placeholder {
+	color: #a4a4a4;
+}
 
 .form_button {
 	border-radius: 0 3px 3px 0;
@@ -146,6 +152,13 @@ header {
 	font-weight: 700;
 	text-transform: uppercase;
 	padding: 20px;
+}
+.menu__link:hover {
+	border-bottom: 3px solid #ef5b70;
+}
+
+.menu__active {
+	border-bottom: 3px solid #ef5b70;
 }
 
 .promo {
@@ -603,7 +616,7 @@ footer {
 	height: 28px;
 	text-align: center;
 	padding-top: 10px;
-	margin: 10px;
+	margin: 5px;
 }
 
 .white {
