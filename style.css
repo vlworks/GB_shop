@@ -633,3 +633,14 @@ footer {
 	background-color: red;
 	color: white;
 }
+
+.breadcrumbs {
+	height: 148px;
+	background-color: #f8f3f4;
+}
+.bread__left h1 {
+	color: #f16d7f;
+	font-size: 24px;
+	font-weight: 790;
+	text-transform: uppercase;
+}
