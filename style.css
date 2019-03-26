@@ -644,3 +644,37 @@ footer {
 	font-weight: 790;
 	text-transform: uppercase;
 }
+
+.bread__right h3 {
+	color: #636363;
+	font-size: 14px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+.bread__right span {
+	color: #f16d7f;
+	font-weight: 700;
+}
+.single {
+	background-color: #f7f7f7;
+	height: 777px;
+}
+
+.single__img {
+	background-image: url(img/single_img.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100%;
+}
+
+.singleD {
+	height: 1290px;
+}
+
+.single__modal {
+	height: 730px;
+	border: 1px solid #f7f7f7;
+	margin-top: -75px;
+	background-color: #fff;
+	
+}
