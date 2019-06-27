@@ -236,13 +236,13 @@
 					<th class="basket__th">Subtotal</th>
 					<th class="basket__th">action</th>
 				</tr>
-				<tr class="basket__card">
+				<tr class="basket__card"  v-for="item of cartItems" :key="item.id_product">
 					<td class="basket__td basket__left">
 						<a href="single.html">
-								<img class="basket__img" src="img/basket-product.jpg" alt="">
+								<img class="basket__img" :src="item.img" :alt="item.product_name">
 						</a>
 						<a href="single.html">		
-							<p class="basket__name">Mango People T-SHIRT</p>
+							<p class="basket__name">{{item.product_name}}</p>
 						</a>
 						<p class="basket__option">
 									Color: <span class="basket__grey">Red</span><br>
@@ -250,73 +250,47 @@
 						</p>
 						
 					</td>
-					<td class="basket__td">$150</td>
+					<td class="basket__td">$ {{item.price}}</td>
 					<td class="basket__td">
-						<input class="basket__quantity" type="number" value="2">
+						<input class="basket__quantity" type="number" :value="item.quantity">
 					</td>
 					<td class="basket__td">FREE</td>
-					<td class="basket__td">$300</td>
+					<td class="basket__td">$ {{item.price * item.quantity}}</td>
 					<td class="basket__td">
-						<a class="basket__del" href="#">
+						<a class="basket__del" href="#" @click.prevent="remove(item)">
 							<i class="fas fa-times-circle"></i>
 						</a>
 					</td>
 				</tr>
-				<tr class="basket__card">
-						<td class="basket__td basket__left">
-							<a href="single.html">
-									<img class="basket__img" src="img/basket-product.jpg" alt="">
-							</a>
-							<a href="single.html">		
-								<p class="basket__name">Mango People T-SHIRT</p>
-							</a>
-							<p class="basket__option">
-										Color: <span class="basket__grey">Red</span><br>
-										Size: <span class="basket__grey">XL</span>
-							</p>
-							
-						</td>
-						<td class="basket__td">$150</td>
-						<td class="basket__td">
-							<input class="basket__quantity" type="number" value="2">
-						</td>
-						<td class="basket__td">FREE</td>
-						<td class="basket__td">$300</td>
-						<td class="basket__td">
-							<a class="basket__del" href="#">
-								<i class="fas fa-times-circle"></i>
-							</a>
-						</td>
-					</tr>
-				<tr class="basket__card">
-							<td class="basket__td basket__left">
-								<a href="single.html">
-										<img class="basket__img" src="img/basket-product.jpg" alt="">
-								</a>
-								<a href="single.html">		
-									<p class="basket__name">Mango People T-SHIRT</p>
-								</a>
-								<p class="basket__option">
-											Color: <span class="basket__grey">Red</span><br>
-											Size: <span class="basket__grey">XL</span>
-								</p>
-								
-							</td>
-							<td class="basket__td">$150</td>
-							<td class="basket__td">
-								<input class="basket__quantity" type="number" value="2">
-							</td>
-							<td class="basket__td">FREE</td>
-							<td class="basket__td">$300</td>
-							<td class="basket__td">
-								<a class="basket__del" href="#">
-									<i class="fas fa-times-circle"></i>
-								</a>
-							</td>
-					</tr>
+<!--				<tr class="basket__card">-->
+<!--						<td class="basket__td basket__left">-->
+<!--							<a href="single.html">-->
+<!--									<img class="basket__img" src="img/basket-product.jpg" alt="">-->
+<!--							</a>-->
+<!--							<a href="single.html">		-->
+<!--								<p class="basket__name">Mango People T-SHIRT</p>-->
+<!--							</a>-->
+<!--							<p class="basket__option">-->
+<!--										Color: <span class="basket__grey">Red</span><br>-->
+<!--										Size: <span class="basket__grey">XL</span>-->
+<!--							</p>-->
+<!--							-->
+<!--						</td>-->
+<!--						<td class="basket__td">$150</td>-->
+<!--						<td class="basket__td">-->
+<!--							<input class="basket__quantity" type="number" value="2">-->
+<!--						</td>-->
+<!--						<td class="basket__td">FREE</td>-->
+<!--						<td class="basket__td">$300</td>-->
+<!--						<td class="basket__td">-->
+<!--							<a class="basket__del" href="#">-->
+<!--								<i class="fas fa-times-circle"></i>-->
+<!--							</a>-->
+<!--						</td>-->
+<!--					</tr>-->
 			</table>
 			<div class="table__option">
-				<a class="bsk-button" href="#">Clear shopping cart</a>
+				<a class="bsk-button" href="#" @click.prevent="clear">Clear shopping cart</a>
 				<a class="bsk-button" href="">continue shopping</a>
 			</div>
 		</div>
@@ -343,8 +317,8 @@
 					</form>
 				</div>
 			<div class="bskbot chk">
-				<p class="chk__sub">sub total<span class="chk__sub__summ">$900</span></p>
-				<p class="chk__total">grand total<span class="chk__total__summ">$900</span></p>
+				<p class="chk__sub">sub total<span class="chk__sub__summ">$ {{cartAmount}}</span></p>
+				<p class="chk__total">grand total<span class="chk__total__summ">$ {{cartAmount}}</span></p>
 				<a href="#" class="chk__button">proceed to checkout</a>
 			</div>
 		</div>
