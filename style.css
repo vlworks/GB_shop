@@ -623,7 +623,7 @@ header {
   margin-left: 39px;
 }
 
-.introF__title h1 {
+.introF__title h2 {
   color: #ffffff;
   font-size: 54px;
   font-weight: 700;
@@ -636,7 +636,7 @@ header {
   color: #f16d7f;
 }
 
-.introF__title h2 {
+.introF__title h3 {
   color: #ffffff;
   font-size: 32px;
   font-weight: 700;
@@ -661,7 +661,7 @@ header {
   margin-right: 33px;
 }
 
-.introF__block__right h1 {
+.introF__block__right h2 {
   color: #fbfbfb;
   font-size: 20px;
   font-weight: 700;
@@ -724,13 +724,13 @@ header {
   margin-top: 19px;
 }
 
-.bottom__block__text h1 {
+.bottom__block__text h2 {
   color: #f16d7f;
   font-size: 16px;
   font-weight: 700;
 }
 
-.bottom__block__text h2 {
+.bottom__block__text h3 {
   color: #222224;
   font-size: 12px;
   font-weight: 300;
@@ -775,7 +775,7 @@ header {
   text-align: center;
 }
 
-.block__text h1 {
+.block__text h2 {
   font-weight: 400;
   font-size: 24px;
   letter-spacing: 0.6px;
@@ -784,7 +784,7 @@ header {
   margin-bottom: 10px;
 }
 
-.block__text h2 {
+.block__text h3 {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: 0.35px;
@@ -942,7 +942,7 @@ footer {
   background-color: #f8f3f4;
 }
 
-.bread__left h1 {
+.bread__left h2 {
   color: #f16d7f;
   font-size: 24px;
   font-weight: 790;
@@ -1101,7 +1101,7 @@ footer {
   margin-top: 119px;
 }
 
-.no__modal h1 {
+.no__modal h2 {
   text-align: center;
   margin-bottom: 72px;
 }
