@@ -53,7 +53,7 @@
 				</div>
 				<div class="head__right">
 					<!--BASKET-->
-					<cart ref="cart"></cart>
+<!--					<cart ref="cart"></cart>-->
 					<!--/BASKET-->
 					<a href="index.html" class="button">My Account<i class="fas fa-sort-down"></i></a> </div>
 			</div>
@@ -252,7 +252,7 @@
 					</td>
 					<td class="basket__td">$ {{item.price}}</td>
 					<td class="basket__td">
-						<input class="basket__quantity" type="number" :value="item.quantity">
+						<input class="basket__quantity" type="number" true-value="item.quantity" v-model="item.quantity">
 					</td>
 					<td class="basket__td">FREE</td>
 					<td class="basket__td">$ {{item.price * item.quantity}}</td>
