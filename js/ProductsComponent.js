@@ -31,7 +31,7 @@ Vue.component('product', {
 <p class="title">{{product.product_name}}</p>
 </a>
 <p class="cost">$ {{product.price}}</p>
-<a href="#" class="add" @click="$root.$refs.cart.addProduct(product)"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
+<a href="#" class="add" @click.prevent="$root.$refs.cart.addProduct(product)"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
 </div>`
 });
 

@@ -1,80 +1,108 @@
 Vue.component('cart', {
     data(){
       return {
-          cartUrl: `/getBasket.json`,
           cartItems: [],
           showCart: false,
-          imgCart: `https://placehold.it/50x100`
       }
     },
     methods: {
         addProduct(product){
-            this.$parent.getJson(`${API}/addToBasket.json`)
-                .then(data => {
-                    if(data.result){
-                        let find = this.cartItems.find(el => el.id_product === product.id_product);
-                        if(find){
-                            find.quantity++
-                        } else {
-                            let prod = Object.assign({quantity: 1}, product);
-                            this.cartItems.push(prod);
-                        }
-                    } else {
-                        console.log('error!')
-                    }
-                })
+            let find = this.cartItems.find(el => el.id_product === product.id_product);
+            if(find){
+                find.quantity++
+            } else {
+                let prod = Object.assign({quantity: 1}, product);
+                this.cartItems.push(prod);
+            }
         },
         remove(product){
-            this.$parent.getJson(`${API}/deleteFromBasket.json`)
-                .then(data => {
-                    if(data.result){
-                        if(product.quantity > 1){
-                            product.quantity--
-                        } else {
-                            this.cartItems.splice(this.cartItems.indexOf(product), 1);
-                        }
-                    } else {
-                        console.log('error!')
-                    }
-                })
+            if(product.quantity > 1){
+                product.quantity--
+            } else {
+                this.cartItems.splice(this.cartItems.indexOf(product), 1);
+            }
         },
     },
     mounted(){
-        this.$parent.getJson(`${API + this.cartUrl}`)
+        this.$parent.getJson(`db/cart.json`)
             .then(data => {
                 for(let el of data.contents){
                     this.cartItems.push(el);
                 }
             });
     },
-    template: `<div>
-<button class="btn-cart" type="button" @click="showCart = !showCart">Корзина</button>
-<div class="cart-block" v-show="showCart">
-            <p v-if="!cartItems.length">Cart is empty</p>
-            <cart-item 
-            v-for="item of cartItems" 
-            :key="item.id_product"
-            :img="imgCart"
-            :cart-item="item"
-            @remove="remove"></cart-item>
-        </div>
-</div>`
+    template: `<div class="for-basket-drop">
+                    <a class="basket-block" @click.prevent="showCart = !showCart">
+                        <img src="img/icon_basket.svg" alt="basket" class="basket-head">
+                        <span class="basket-quantity">{{cartItems.length}}</span>
+                    </a>
+                    <div class="drop drop_basket" v-show="showCart">
+                            <div class="basket-null" v-if="!cartItems.length">Корзина пуста</div>
+                            <div class="basket-wrap" v-if="cartItems.length">
+                                <ul class="drop__cart">
+                                   <cart-item
+                                     v-for="item of cartItems"
+                                     :key="item.id_product"
+                                     :cart-item="item"
+                                     @remove="remove"></cart-item> 
+                                </ul>
+                                <div class="cart__total">
+                                    <div class="total-text">TOTAL</div>
+                                    <div class="total-sum">$500.00</div>
+                                </div>
+                                <div class="cart__bottom">
+                                    <a href="#" class="cart-checkout">checkout</a>
+                                    <a href="basket.html" class="cart-go">go to cart</a>
+                                </div>
+                            </div>
+                    </div>
+                </div>`
+//     template: `<div>
+// <button class="btn-cart" type="button" @click="showCart = !showCart">Корзина</button>
+// <div class="cart-block" v-show="showCart">
+//             <p v-if="!cartItems.length">Cart is empty</p>
+//             <cart-item
+//             v-for="item of cartItems"
+//             :key="item.id_product"
+//             :cart-item="item"
+//             @remove="remove"></cart-item>
+//         </div>
+// </div>`
 });
 
 Vue.component('cart-item', {
-    props: ['cartItem', 'img'],
-    template: `<div class="cart-item" >
-                <div class="product-bio">
-                    <img :src="img" alt="Some image">
-                    <div class="product-desc">
-                        <p class="product-title">{{cartItem.product_name}}</p>
-                        <p class="product-quantity">Quantity: {{cartItem.quantity}}</p>
-                        <p class="product-single-price">$ {{cartItem.price}} each</p>
+    props: ['cartItem'],
+    template: `<li>
+                    <div class="cart__item">
+                        <div class="cart__img"><img :src="cartItem.img" :alt="cartItem.product_name" class="cart__img_width"></div>
+                        <div class="cart__desc">
+                            <div class="cart__title">{{cartItem.product_name}}</div>
+                            <div class="cart__rank"><img src="img/cartrank.png" alt="cartrank"></div>
+                            <div class="cart__stats">
+                                <span class="cart__quantity">{{cartItem.quantity}}</span>
+                                <span class="cart__x">x</span>
+                                <span class="cart__count">{{cartItem.price}} $</span>
+                            </div>
+                        </div>
+                        <div class="cart__remove">
+                            <a class="basket__del" href="#" @click="$emit('remove', cartItem)">
+                                <i class="fas fa-times-circle"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="right-block">
-                    <p class="product-price">$ {{cartItem.quantity*cartItem.price}}</p>
-                    <button class="del-btn" @click="$emit('remove', cartItem)">&times;</button>
-                </div>
-            </div>`
+                </li>`
+    // template: `<div class="cart-item" >
+    //             <div class="product-bio">
+    //                 <img src="" alt="Some image">
+    //                 <div class="product-desc">
+    //                     <p class="product-title">{{cartItem.product_name}}</p>
+    //                     <p class="product-quantity">Quantity: {{cartItem.quantity}}</p>
+    //                     <p class="product-single-price">$ {{cartItem.price}} each</p>
+    //                 </div>
+    //             </div>
+    //             <div class="right-block">
+    //                 <p class="product-price">$ {{cartItem.quantity*cartItem.price}}</p>
+    //                 <button class="del-btn" @click="$emit('remove', cartItem)">&times;</button>
+    //             </div>
+    //         </div>`
 })
