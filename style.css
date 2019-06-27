@@ -191,6 +191,7 @@ header {
   margin-left: 37px;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
+  cursor: pointer;
 }
 
 .browse__box:hover .drop {
@@ -249,6 +250,14 @@ header {
   font-weight: 400;
   letter-spacing: 0.35px;
   margin-left: -3px;
+  cursor: pointer;
+  transition: background 0.3s;
+  transition: color 0.3s;
+}
+
+.form_button:hover {
+  background-color: #f16d7f;
+  color: #ffffff;
 }
 
 .head__right {
@@ -259,9 +268,30 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-
+.basket-block {
+  position: relative;
+}
 .basket-head {
   margin-right: 26px;
+}
+.basket-head:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.basket-quantity {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  background-color: #f16d7f;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  right: 25px;
+  top: -14px
 }
 
 .button {
@@ -828,6 +858,10 @@ header {
   font-weight: 400;
   letter-spacing: 0.35px;
   line-height: 13px;
+  cursor: pointer;
+}
+.sub__search button:hover {
+  background-color: #f13c55;
 }
 
 .sub__search input,
