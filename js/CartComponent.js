@@ -3,23 +3,28 @@ Vue.component('cart', {
       return {
           cartItems: [],
           showCart: false,
+          cartAmount: 0
       }
     },
     methods: {
         addProduct(product){
             let find = this.cartItems.find(el => el.id_product === product.id_product);
             if(find){
-                find.quantity++
+                find.quantity++;
+                this.cartAmount += product.price;
             } else {
                 let prod = Object.assign({quantity: 1}, product);
                 this.cartItems.push(prod);
+                this.cartAmount += product.price;
             }
         },
         remove(product){
             if(product.quantity > 1){
-                product.quantity--
+                product.quantity--;
+                this.cartAmount -= product.price;
             } else {
                 this.cartItems.splice(this.cartItems.indexOf(product), 1);
+                this.cartAmount -= product.price;
             }
         },
     },
@@ -28,8 +33,14 @@ Vue.component('cart', {
             .then(data => {
                 for(let el of data.contents){
                     this.cartItems.push(el);
+                    this.cartAmount += el.price * el.quantity;
                 }
             });
+    },
+    computed: {
+        total(){
+            return this.cartAmount;
+        }
     },
     template: `<div class="for-basket-drop">
                     <a class="basket-block" @click.prevent="showCart = !showCart">
@@ -48,7 +59,7 @@ Vue.component('cart', {
                                 </ul>
                                 <div class="cart__total">
                                     <div class="total-text">TOTAL</div>
-                                    <div class="total-sum">$500.00</div>
+                                    <div class="total-sum">$ {{total}}</div>
                                 </div>
                                 <div class="cart__bottom">
                                     <a href="#" class="cart-checkout">checkout</a>
