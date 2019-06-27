@@ -147,7 +147,7 @@ header {
           align-items: center;
   color: #222222;
   font-size: 27px;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   line-height: 27px;
   text-decoration: none;
@@ -1852,6 +1852,9 @@ input[type="number"]::-webkit-inner-spin-button {
   text-transform: uppercase;
   border: 1px solid #b3b2b2;
   width: 70px;
+}
+.check-btn:hover {
+  background-color: #b3b2b2;
 }
 .check-ul {
   list-style-type: none;
