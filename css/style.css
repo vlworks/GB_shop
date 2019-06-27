@@ -1125,11 +1125,12 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+
 }
 
 .modal__form__button:hover {
-  -webkit-filter: brightness(95%);
-          filter: brightness(95%);
+  background-color: #f1b5be;
 }
 
 .no__modal {
