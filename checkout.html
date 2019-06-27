@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Корзина | Brand SHOP</title>
+	<title>Checkout | Brand SHOP</title>
 </head>
 
 <body>
@@ -226,101 +226,50 @@
 					</div>
 				</div>
 			</nav>
-		<div class="container bsk-tbl">
-			<table class="basket">
-				<tr class="basket__title">
-					<th class="basket__th basket__left">Product Details</th>
-					<th class="basket__th">unite Price</th>
-					<th class="basket__th">Quantity</th>
-					<th class="basket__th">shipping</th>
-					<th class="basket__th">Subtotal</th>
-					<th class="basket__th">action</th>
-				</tr>
-				<tr class="basket__card"  v-for="item of cartItems" :key="item.id_product">
-					<td class="basket__td basket__left">
-						<a href="single.html">
-								<img class="basket__img" :src="item.img" :alt="item.product_name">
-						</a>
-						<a href="single.html">		
-							<p class="basket__name">{{item.product_name}}</p>
-						</a>
-						<p class="basket__option">
-									Color: <span class="basket__grey">Red</span><br>
-									Size: <span class="basket__grey">XL</span>
-						</p>
-						
-					</td>
-					<td class="basket__td">$ {{item.price}}</td>
-					<td class="basket__td">
-						<input class="basket__quantity" type="number" true-value="item.quantity" v-model="item.quantity">
-					</td>
-					<td class="basket__td">FREE</td>
-					<td class="basket__td">$ {{item.price * item.quantity}}</td>
-					<td class="basket__td">
-						<a class="basket__del" href="#" @click.prevent="remove(item)">
-							<i class="fas fa-times-circle"></i>
-						</a>
-					</td>
-				</tr>
-<!--				<tr class="basket__card">-->
-<!--						<td class="basket__td basket__left">-->
-<!--							<a href="single.html">-->
-<!--									<img class="basket__img" src="img/basket-product.jpg" alt="">-->
-<!--							</a>-->
-<!--							<a href="single.html">		-->
-<!--								<p class="basket__name">Mango People T-SHIRT</p>-->
-<!--							</a>-->
-<!--							<p class="basket__option">-->
-<!--										Color: <span class="basket__grey">Red</span><br>-->
-<!--										Size: <span class="basket__grey">XL</span>-->
-<!--							</p>-->
-<!--							-->
-<!--						</td>-->
-<!--						<td class="basket__td">$150</td>-->
-<!--						<td class="basket__td">-->
-<!--							<input class="basket__quantity" type="number" value="2">-->
-<!--						</td>-->
-<!--						<td class="basket__td">FREE</td>-->
-<!--						<td class="basket__td">$300</td>-->
-<!--						<td class="basket__td">-->
-<!--							<a class="basket__del" href="#">-->
-<!--								<i class="fas fa-times-circle"></i>-->
-<!--							</a>-->
-<!--						</td>-->
-<!--					</tr>-->
-			</table>
-			<div class="table__option">
-				<a class="bsk-button" href="#" @click.prevent="clear">Clear shopping cart</a>
-				<a class="bsk-button" href="">continue shopping</a>
-			</div>
-		</div>
-		<div class="container bsk-option">
-			<div class="bskbot">
-				<h2 class="bskbot__h2">Shipping adress</h2>
-				<form class="ship-dress" action="#">
-					<select class="bskbot__area" name="city">
-						<option value="Kingsiepp">Kingsiepp</option>
-						<option value="Moscow">Moscow</option>
-						<option value="London">London</option>
-					</select>
-					<input class="bskbot__area" type="text" placeholder="State">
-					<input class="bskbot__area" type="text" placeholder="Postcode / Zip">
-					<button class="bskbot__button" type="submit">get a quote</button>
-				</form>
-			</div>
-			<div class="bskbot">
-					<h2 class="bskbot__h2">Coupon discount</h2>
-					<form class="ship-discount" action="#">
-						<p class="bskbot__p">Enter your coupon code if you have one</p>
-						<input class="bskbot__area" type="text" placeholder="Number coupon">
-						<button class="bskbot__button" type="submit">apply coupon</button>
-					</form>
+		<div class="checkout-body">
+			<details class="check-details" open>
+				<summary class="check-summary">01. Shipping Adress</summary>
+				<div class="check-content">
+					<div class="check-contentleft">
+						<h2 class="check-h2">Check as a guest or register</h2>
+						<p class="check-gray">Register with us for future convenience</p>
+						<input type="radio" name="sign" value="checkout" id="signout" class="check-radio"><label class="check-label" for="signout">checkout as guest</label><br>
+						<input type="radio" name="sign" value="register" id="signin" class="check-radio"><label class="check-label" for="signin">register</label>
+						<h2 class="check-h2">register and save time!</h2>
+						<p class="check-gray">Register with us for future convenience</p>
+						<ul class="check-ul">
+							<li class="check-gray"><i class="fas fa-angle-double-right"></i>Fast and easy checkout</li>
+							<li class="check-gray"><i class="fas fa-angle-double-right"></i>Easy access to your order history and status</li>
+						</ul>
+						<a href="#" class="check-btn">continue</a>
+					</div>
+					<div class="checkcontentright">
+						<h2 class="check-h2">Already registed?</h2>
+						<p class="check-gray">Please log in below</p>
+						<label>EMAIL ADDRESS<span class="check-red">*</span><br><input type="email" class="check-email"></label><br>
+						<label>PASSWORD<span class="check-red">*</span><br><input type="email" class="check-password"></label>
+						<p class="check-red">* Required Fileds</p>
+						<br><br>
+						<a href="#" class="check-btn">log in</a><span class="check-gray">Forgot Password ?</span>
+					</div>
 				</div>
-			<div class="bskbot chk">
-				<p class="chk__sub">sub total<span class="chk__sub__summ">$ {{cartAmount}}</span></p>
-				<p class="chk__total">grand total<span class="chk__total__summ">$ {{cartAmount}}</span></p>
-				<a href="checkout.html" class="chk__button">proceed to checkout</a>
-			</div>
+			</details>
+			<details class="check-details">
+				<summary class="check-summary">02. BILLING INFORMATION</summary>
+
+			</details>
+			<details class="check-details">
+				<summary class="check-summary">03. SHIPPING INFORMATION</summary>
+			</details>
+			<details class="check-details">
+				<summary class="check-summary">04. SHIPPING METHOD</summary>
+			</details>
+			<details class="check-details">
+				<summary class="check-summary">05. PAYMENT METHOD</summary>
+			</details>
+			<details class="check-details">
+				<summary class="check-summary">06. ORDER REVIEW</summary>
+			</details>
 		</div>
 		<div class="sub">
 			<div class="container sub-flex">

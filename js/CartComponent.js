@@ -62,7 +62,7 @@ Vue.component('cart', {
                                     <div class="total-sum">$ {{total}}</div>
                                 </div>
                                 <div class="cart__bottom">
-                                    <a href="#" class="cart-checkout">checkout</a>
+                                    <a href="checkout.html" class="cart-checkout">checkout</a>
                                     <a href="basket.html" class="cart-go">go to cart</a>
                                 </div>
                             </div>
