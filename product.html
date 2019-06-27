@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div class="mega-container">
+	<div class="mega-container" id="mega-container">
 		<header>
 					<div class="container d-flex">
 						<div class="head__left">
@@ -325,80 +325,81 @@
 						</div>
 					</div>
 					<div class="shop__product">
-						<div class="fetured__box">
-							<div class="fetured__block">
-								<a href="single.html"><img class="fetures__img" src="img/product1.jpg" alt="product1"></a>
-								<a href="single.html">
-									<p class="title">MANGO PEOPLE T-SHIRT</p>
-								</a>
-								<p class="cost">$52.00</p>
-								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-							</div>
-							<div class="fetured__block">
-								<a href="#"><img class="fetures__img" src="img/product2.jpg" alt="fetured1"></a>
-								<a href="#">
-									<p class="title">MANGO PEOPLE T-SHIRT</p>
-								</a>
-								<p class="cost">$52.00</p>
-								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-							</div>
-							<div class="fetured__block">
-								<a href="#"><img class="fetures__img" src="img/product2.jpg" alt="fetured1"></a>
-								<a href="#">
-									<p class="title">MANGO PEOPLE T-SHIRT</p>
-								</a>
-								<p class="cost">$52.00</p>
-								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-							</div>
-							<div class="fetured__block">
-								<a href="#"><img class="fetures__img" src="img/single4.jpg" alt="fetured1"></a>
-								<a href="#">
-									<p class="title">MANGO PEOPLE T-SHIRT</p>
-								</a>
-								<p class="cost">$52.00</p>
-								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-							</div>
-							<div class="fetured__block">
-								<a href="#"><img class="fetures__img" src="img/product3.jpg" alt="fetured1"></a>
-								<a href="#">
-									<p class="title">MANGO PEOPLE T-SHIRT</p>
-								</a>
-								<p class="cost">$52.00</p>
-								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-							</div>
-							<div class="fetured__block">
-								<a href="#"><img class="fetures__img" src="img/product3.jpg" alt="fetured1"></a>
-								<a href="#">
-									<p class="title">MANGO PEOPLE T-SHIRT</p>
-								</a>
-								<p class="cost">$52.00</p>
-								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-							</div>
-							<div class="fetured__block">
-								<a href="#"><img class="fetures__img" src="img/single4.jpg" alt="fetured1"></a>
-								<a href="#">
-									<p class="title">MANGO PEOPLE T-SHIRT</p>
-								</a>
-								<p class="cost">$52.00</p>
-								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-							</div>
-							<div class="fetured__block">
-								<a href="#"><img class="fetures__img" src="img/single4.jpg" alt="fetured1"></a>
-								<a href="#">
-									<p class="title">MANGO PEOPLE T-SHIRT</p>
-								</a>
-								<p class="cost">$52.00</p>
-								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-							</div>
-							<div class="fetured__block">
-								<a href="#"><img class="fetures__img" src="img/single4.jpg" alt="fetured1"></a>
-								<a href="#">
-									<p class="title">MANGO PEOPLE T-SHIRT</p>
-								</a>
-								<p class="cost">$52.00</p>
-								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-							</div>
-						</div>
+						<products ref="products" slice="9"></products>
+<!--						<div class="fetured__box">-->
+<!--							<div class="fetured__block">-->
+<!--								<a href="single.html"><img class="fetures__img" src="img/product1.jpg" alt="product1"></a>-->
+<!--								<a href="single.html">-->
+<!--									<p class="title">MANGO PEOPLE T-SHIRT</p>-->
+<!--								</a>-->
+<!--								<p class="cost">$52.00</p>-->
+<!--								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>-->
+<!--							</div>-->
+<!--							<div class="fetured__block">-->
+<!--								<a href="#"><img class="fetures__img" src="img/product2.jpg" alt="fetured1"></a>-->
+<!--								<a href="#">-->
+<!--									<p class="title">MANGO PEOPLE T-SHIRT</p>-->
+<!--								</a>-->
+<!--								<p class="cost">$52.00</p>-->
+<!--								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>-->
+<!--							</div>-->
+<!--							<div class="fetured__block">-->
+<!--								<a href="#"><img class="fetures__img" src="img/product2.jpg" alt="fetured1"></a>-->
+<!--								<a href="#">-->
+<!--									<p class="title">MANGO PEOPLE T-SHIRT</p>-->
+<!--								</a>-->
+<!--								<p class="cost">$52.00</p>-->
+<!--								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>-->
+<!--							</div>-->
+<!--							<div class="fetured__block">-->
+<!--								<a href="#"><img class="fetures__img" src="img/single4.jpg" alt="fetured1"></a>-->
+<!--								<a href="#">-->
+<!--									<p class="title">MANGO PEOPLE T-SHIRT</p>-->
+<!--								</a>-->
+<!--								<p class="cost">$52.00</p>-->
+<!--								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>-->
+<!--							</div>-->
+<!--							<div class="fetured__block">-->
+<!--								<a href="#"><img class="fetures__img" src="img/product3.jpg" alt="fetured1"></a>-->
+<!--								<a href="#">-->
+<!--									<p class="title">MANGO PEOPLE T-SHIRT</p>-->
+<!--								</a>-->
+<!--								<p class="cost">$52.00</p>-->
+<!--								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>-->
+<!--							</div>-->
+<!--							<div class="fetured__block">-->
+<!--								<a href="#"><img class="fetures__img" src="img/product3.jpg" alt="fetured1"></a>-->
+<!--								<a href="#">-->
+<!--									<p class="title">MANGO PEOPLE T-SHIRT</p>-->
+<!--								</a>-->
+<!--								<p class="cost">$52.00</p>-->
+<!--								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>-->
+<!--							</div>-->
+<!--							<div class="fetured__block">-->
+<!--								<a href="#"><img class="fetures__img" src="img/single4.jpg" alt="fetured1"></a>-->
+<!--								<a href="#">-->
+<!--									<p class="title">MANGO PEOPLE T-SHIRT</p>-->
+<!--								</a>-->
+<!--								<p class="cost">$52.00</p>-->
+<!--								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>-->
+<!--							</div>-->
+<!--							<div class="fetured__block">-->
+<!--								<a href="#"><img class="fetures__img" src="img/single4.jpg" alt="fetured1"></a>-->
+<!--								<a href="#">-->
+<!--									<p class="title">MANGO PEOPLE T-SHIRT</p>-->
+<!--								</a>-->
+<!--								<p class="cost">$52.00</p>-->
+<!--								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>-->
+<!--							</div>-->
+<!--							<div class="fetured__block">-->
+<!--								<a href="#"><img class="fetures__img" src="img/single4.jpg" alt="fetured1"></a>-->
+<!--								<a href="#">-->
+<!--									<p class="title">MANGO PEOPLE T-SHIRT</p>-->
+<!--								</a>-->
+<!--								<p class="cost">$52.00</p>-->
+<!--								<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>-->
+<!--							</div>-->
+<!--						</div>-->
 					</div>
 					<div class="shop__pages">
 						<div class="shop__pages__left">
@@ -508,6 +509,13 @@
 			</div>
 		</footer>
 	</div>
+	<!--Connect Vue and js-->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="js/ProductsComponent.js"></script>
+	<script src="js/CartComponent.js"></script>
+	<script src="js/dataError.js"></script>
+	<script defer src="js/main.js"></script>
+	<!--/Connect Vue and js-->
 </body>
 
 </html>

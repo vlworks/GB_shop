@@ -1,4 +1,5 @@
 Vue.component('products', {
+    props: ['slice'],
     data(){
       return {
           products: [],
@@ -15,21 +16,23 @@ Vue.component('products', {
                 }
             })
     },
-    template: `<div class="products">
+    template: `<div class="fetured__box">
         <product 
-        v-for="product of products" 
+        v-for="product of products.slice(0, slice)" 
         :key="product.id_product"
         :product="product"></product>
     </div>`
 });
 Vue.component('product', {
     props: ['product'],
-    template: `<div class="product-item" >
-            <img :src="product.img" :alt="product.product_name">
-            <div class="desc">
-                <h3>{{product.product_name}}</h3>
-                <p>{{product.price}}</p>
-                <button class="buy-btn" @click="$root.$refs.cart.addProduct(product)">Купить</button>
-            </div>
-        </div>`
-})
+    template: `<div class="fetured__block">
+<a href="single.html"><img class="fetures__img" :src="product.img" alt="product.product_name"></a>
+<a href="single.html">
+<p class="title">{{product.product_name}}</p>
+</a>
+<p class="cost">$ {{product.price}}</p>
+<a href="#" class="add" @click="$root.$refs.cart.addProduct(product)"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
+</div>`
+});
+
+// <button class="buy-btn" @click="$root.$refs.cart.addProduct(product)">Купить</button>
