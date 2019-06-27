@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Страница товара | Brand SHOP</title>
+	<title>Корзина | Brand SHOP</title>
 </head>
 
 <body>
@@ -60,7 +60,7 @@
 						<ul class="menu">
 							<li class="menu__item"><a href="index.html" class="menu__link">home</a></li>
 							<li class="menu__item"><a href="product.html" class="menu__link">man</a></li>
-							<li class="menu__item"><a href="product.html" class="menu__link menu__active">women</a>
+							<li class="menu__item"><a href="product.html" class="menu__link">women</a>
 							<div class="drop drop_menu">
 									<div class="drop__flex">
 										<h3 class="drop__title">Women</h3>
@@ -232,93 +232,126 @@
 					</div>
 				</div>
 			</nav>
-		<div class="single">
-			<div class="container single__img"> </div>
+		<div class="container bsk-tbl">
+			<table class="basket">
+				<tr class="basket__title">
+					<th class="basket__th basket__left">Product Details</th>
+					<th class="basket__th">unite Price</th>
+					<th class="basket__th">Quantity</th>
+					<th class="basket__th">shipping</th>
+					<th class="basket__th">Subtotal</th>
+					<th class="basket__th">action</th>
+				</tr>
+				<tr class="basket__card">
+					<td class="basket__td basket__left">
+						<a href="single.html">
+								<img class="basket__img" src="img/basket-product.jpg" alt="">
+						</a>
+						<a href="single.html">		
+							<p class="basket__name">Mango People T-SHIRT</p>
+						</a>
+						<p class="basket__option">
+									Color: <span class="basket__grey">Red</span><br>
+									Size: <span class="basket__grey">XL</span>
+						</p>
+						
+					</td>
+					<td class="basket__td">$150</td>
+					<td class="basket__td">
+						<input class="basket__quantity" type="number" value="2">
+					</td>
+					<td class="basket__td">FREE</td>
+					<td class="basket__td">$300</td>
+					<td class="basket__td">
+						<a class="basket__del" href="#">
+							<i class="fas fa-times-circle"></i>
+						</a>
+					</td>
+				</tr>
+				<tr class="basket__card">
+						<td class="basket__td basket__left">
+							<a href="single.html">
+									<img class="basket__img" src="img/basket-product.jpg" alt="">
+							</a>
+							<a href="single.html">		
+								<p class="basket__name">Mango People T-SHIRT</p>
+							</a>
+							<p class="basket__option">
+										Color: <span class="basket__grey">Red</span><br>
+										Size: <span class="basket__grey">XL</span>
+							</p>
+							
+						</td>
+						<td class="basket__td">$150</td>
+						<td class="basket__td">
+							<input class="basket__quantity" type="number" value="2">
+						</td>
+						<td class="basket__td">FREE</td>
+						<td class="basket__td">$300</td>
+						<td class="basket__td">
+							<a class="basket__del" href="#">
+								<i class="fas fa-times-circle"></i>
+							</a>
+						</td>
+					</tr>
+				<tr class="basket__card">
+							<td class="basket__td basket__left">
+								<a href="single.html">
+										<img class="basket__img" src="img/basket-product.jpg" alt="">
+								</a>
+								<a href="single.html">		
+									<p class="basket__name">Mango People T-SHIRT</p>
+								</a>
+								<p class="basket__option">
+											Color: <span class="basket__grey">Red</span><br>
+											Size: <span class="basket__grey">XL</span>
+								</p>
+								
+							</td>
+							<td class="basket__td">$150</td>
+							<td class="basket__td">
+								<input class="basket__quantity" type="number" value="2">
+							</td>
+							<td class="basket__td">FREE</td>
+							<td class="basket__td">$300</td>
+							<td class="basket__td">
+								<a class="basket__del" href="#">
+									<i class="fas fa-times-circle"></i>
+								</a>
+							</td>
+					</tr>
+			</table>
+			<div class="table__option">
+				<a class="bsk-button" href="#">Clear shopping cart</a>
+				<a class="bsk-button" href="">continue shopping</a>
+			</div>
 		</div>
-		<div class="singleD">
-			<div class="container">
-				<div class="single__modal">
-					<div class="modal__container">
-						<div class="modal__up">
-							<div class="modal__up1">
-								<h3>WOMEN COLLECTION</h3>
-								<h1>Moschino Cheap And Chic</h1>
-								<p>Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals. </p>
-							</div>
-							<div class="modal__up2">Material: <span>COTTON</span>DESIGNER: <span>BINBURHAN</span></div>
-							<div class="modal__up3">$561</div>
-						</div>
-						<div class="modal__down">
-							<form action="#" class="modal__form">
-								<div class="form__left">
-									<label for="">CHOOSE COLOR</label>
-									<br>
-									<br>
-									<select name="color" id="">
-										<option value="red">Red</option>
-										<option value="white">White</option>
-									</select>
-								</div>
-								<div class="form__center">
-									<label for="">CHOOSE SIZE</label>
-									<br>
-									<br>
-									<select name="size" id="">
-										<option value="red">XS</option>
-										<option value="white">S</option>
-									</select>
-								</div>
-								<div class="form__right">
-									<label for="">QUANTITY</label>
-									<br>
-									<br>
-									<select name="color" id="">
-										<option value="quantity">1</option>
-										<option value="white">2</option>
-									</select>
-								</div>
-								<button class="modal__form__button"><img src="img/red_basket.svg" alt="basket-head" class="basket-head">Add to Cart</button>
-							</form>
-						</div>
-					</div>
+		<div class="container bsk-option">
+			<div class="bskbot">
+				<h2 class="bskbot__h2">Shipping adress</h2>
+				<form class="ship-dress" action="#">
+					<select class="bskbot__area" name="city">
+						<option value="Kingsiepp">Kingsiepp</option>
+						<option value="Moscow">Moscow</option>
+						<option value="London">London</option>
+					</select>
+					<input class="bskbot__area" type="text" placeholder="State">
+					<input class="bskbot__area" type="text" placeholder="Postcode / Zip">
+					<button class="bskbot__button" type="submit">get a quote</button>
+				</form>
+			</div>
+			<div class="bskbot">
+					<h2 class="bskbot__h2">Coupon discount</h2>
+					<form class="ship-discount" action="#">
+						<p class="bskbot__p">Enter your coupon code if you have one</p>
+						<input class="bskbot__area" type="text" placeholder="Number coupon">
+						<button class="bskbot__button" type="submit">apply coupon</button>
+					</form>
 				</div>
-				<section class="no__modal">
-					<h1>YOU MAY LIKE ALSO</h1>
-					<div class="fetured__box">
-						<div class="fetured__block">
-							<a href="#"><img class="fetures__img" src="img/single1.jpg" alt="product1"></a>
-							<a href="#">
-								<p class="title">MANGO PEOPLE T-SHIRT</p>
-							</a>
-							<p class="cost">$52.00</p>
-							<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="basket">Add to Cart</a>
-						</div>
-						<div class="fetured__block">
-							<a href="#"><img class="fetures__img" src="img/single2.jpg" alt="fetured1"></a>
-							<a href="#">
-								<p class="title">MANGO PEOPLE T-SHIRT</p>
-							</a>
-							<p class="cost">$52.00</p>
-							<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-						</div>
-						<div class="fetured__block">
-							<a href="#"><img class="fetures__img" src="img/single3.jpg" alt="fetured1"></a>
-							<a href="#">
-								<p class="title">MANGO PEOPLE T-SHIRT</p>
-							</a>
-							<p class="cost">$52.00</p>
-							<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-						</div>
-						<div class="fetured__block">
-							<a href="#"><img class="fetures__img" src="img/single4.jpg" alt="fetured1"></a>
-							<a href="#">
-								<p class="title">MANGO PEOPLE T-SHIRT</p>
-							</a>
-							<p class="cost">$52.00</p>
-							<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-						</div>
-					</div>
-				</section>
+			<div class="bskbot chk">
+				<p class="chk__sub">sub total<span class="chk__sub__summ">$900</span></p>
+				<p class="chk__total">grand total<span class="chk__total__summ">$900</span></p>
+				<a href="#" class="chk__button">proceed to checkout</a>
 			</div>
 		</div>
 		<div class="sub">
