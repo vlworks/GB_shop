@@ -147,7 +147,7 @@ header {
           align-items: center;
   color: #222222;
   font-size: 27px;
-  font-weight: 300;
+  font-weight: 400;
   text-transform: uppercase;
   line-height: 27px;
   text-decoration: none;
@@ -388,7 +388,7 @@ header {
 }
 
 .promo__box {
-  background-image: url(img/promo_bg.jpg);
+  background-image: url(../img/promo_bg.jpg);
   background-repeat: no-repeat;
   background-position: 0 -51px;
   height: 100%;
@@ -470,7 +470,7 @@ header {
 
 .top__left {
   height: 542px;
-  background-image: url(img/intro_man.jpg);
+  background-image: url(../img/intro_man.jpg);
   margin-bottom: 20px;
 }
 
@@ -482,7 +482,7 @@ header {
 .bottom__left {
   height: 261px;
   background-color: #dadad2;
-  background-image: url(img/intro_purse.jpg);
+  background-image: url(../img/intro_purse.jpg);
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -490,7 +490,7 @@ header {
 .top__right {
   height: 261px;
   background-color: #dadad2;
-  background-image: url(img/intro_women.jpg);
+  background-image: url(../img/intro_women.jpg);
   background-repeat: no-repeat;
   background-position: right;
   margin-bottom: 20px;
@@ -498,7 +498,7 @@ header {
 
 .bottom__right {
   height: 542px;
-  background-image: url(img/intro_kids.jpg);
+  background-image: url(../img/intro_kids.jpg);
 }
 
 .fetured__text {
@@ -638,7 +638,7 @@ header {
 .introF__left {
   height: 529px;
   width: 767px;
-  background-image: url(img/introF_bg.jpg);
+  background-image: url(../img/introF_bg.jpg);
 }
 
 .introF__right {
@@ -708,7 +708,7 @@ header {
 }
 
 .sub {
-  background-image: url(img/sub_bg.jpg);
+  background-image: url(../img/sub_bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   height: 438px;
@@ -1001,7 +1001,7 @@ footer {
 }
 
 .single__img {
-  background-image: url(img/single_img.jpg);
+  background-image: url(../img/single_img.jpg);
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
@@ -1125,11 +1125,12 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+
 }
 
 .modal__form__button:hover {
-  -webkit-filter: brightness(95%);
-          filter: brightness(95%);
+  background-color: #f1b5be;
 }
 
 .no__modal {
@@ -1683,6 +1684,9 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 72px;
   height: 85px;
 }
+.cart__img_width {
+  width: 72px;
+}
 .cart__desc {
   margin-left: 15px;
   padding-top: 10px;
@@ -1770,5 +1774,111 @@ input[type="number"]::-webkit-inner-spin-button {
   color: #ffffff;
   background-color: #f16d7f;
 }
+
+.error {
+    position: absolute;
+    /*left: 0;*/
+    /*top: 0;*/
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-error {
+    height: auto;
+    width: 450px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+}
+.checkout-body {
+    padding: 90px 230px;
+}
+.check-details {
+  border-bottom: 1px solid #b3b2b2;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.check-summary {
+  color: #222222;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  }
+.check-content {
+  padding: 35px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.check-h2 {
+  color: #222222;
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 13px;
+  margin: 10px 0px;
+}
+.check-gray {
+  color: #b3b2b2;
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 10px 0px;
+}
+.check-label {
+  color: #222222;
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 13px;
+  margin: 5px;
+}
+.check-btn {
+  display: block;
+  padding: 20px 55px;
+  color: #4a4a4a;
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid #b3b2b2;
+  width: 70px;
+}
+.check-btn:hover {
+  background-color: #b3b2b2;
+}
+.check-ul {
+  list-style-type: none;
+}
+.check-email {
+  width: 390px;
+  height: 45px;
+  margin: 10px 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.check-password {
+  width: 390px;
+  height: 45px;
+  margin: 10px 0px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.check-red {
+  color: red;
+}
+.check-radio {
+  margin: 10px;
+}
+
 
 /*# sourceMappingURL=style.css.map */

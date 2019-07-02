@@ -4,15 +4,16 @@
 <head>
 	<!--FontAwesome-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<!--FontAwesome-->
-	<link rel="stylesheet" href="style.css">
+	<!--/FontAwesome-->
+	<link rel="stylesheet" href="css/style.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Главная страница | Brand SHOP</title>
 </head>
 
 <body>
-	<div class="mega-container">
+	<div class="mega-container" id="mega-container">
+		<data-error ref="error"></data-error>
 		<header>
 			<div class="container d-flex">
 				<div class="head__left">
@@ -51,65 +52,9 @@
 					</form>
 				</div>
 				<div class="head__right">
-					<div class="for-basket-drop">
-                        <a href="basket.html" class="basket-block">
-                            <img src="img/icon_basket.svg" alt="basket" class="basket-head">
-                            <span class="basket-quantity">2</span>
-                        </a>
-                        <div class="drop drop_basket">
-                                <div class="basket-null">Корзина пуста</div>
-                                <div class="basket-wrap">
-                                    <ul class="drop__cart">
-                                        <li>
-                                            <div class="cart__item">
-                                                <div class="cart__img"><img src="img/cartimg1.jpg" alt="cartimg"></div>
-                                                <div class="cart__desc">
-                                                    <div class="cart__title">rebon zone</div>
-                                                    <div class="cart__rank"><img src="img/cartrank.png" alt="cartrank"></div>
-                                                    <div class="cart__stats">
-                                                        <span class="cart__quantity">1</span>
-                                                        <span class="cart__x">x</span>
-                                                        <span class="cart__count">250</span>
-                                                    </div>
-                                                </div>
-                                                <div class="cart__remove">
-                                                    <a class="basket__del" href="#">
-                                                        <i class="fas fa-times-circle"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="cart__item">
-                                                <div class="cart__img"><img src="img/cartimg1.jpg" alt="cartimg"></div>
-                                                <div class="cart__desc">
-                                                    <div class="cart__title">rebon zone</div>
-                                                    <div class="cart__rank"><img src="img/cartrank.png" alt=""></div>
-                                                    <div class="cart__stats">
-                                                        <span class="cart__quantity">1</span>
-                                                        <span class="cart__x">x</span>
-                                                        <span class="cart__count">250</span>
-                                                    </div>
-                                                </div>
-                                                <div class="cart__remove">
-                                                    <a class="basket__del" href="#">
-                                                        <i class="fas fa-times-circle"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="cart__total">
-                                        <div class="total-text">TOTAL</div>
-                                        <div class="total-sum">$500.00</div>
-                                    </div>
-                                    <div class="cart__bottom">
-                                        <a href="#" class="cart-checkout">checkout</a>
-                                        <a href="#" class="cart-go">go to cart</a>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
+					<!--BASKET-->
+					<cart ref="cart"></cart>
+					<!--/BASKET-->
 					<a href="index.html" class="button">My Account<i class="fas fa-sort-down"></i></a> </div>
 			</div>
 		</header>
@@ -321,72 +266,7 @@
 					<h2 class="fetured__text__h2">Fetured Items</h2>
 					<p class="fetured__text__p">Shop for items based on what we featured in this week</p>
 				</div>
-				<div class="fetured__box">
-					<div class="fetured__block">
-						<a href="single.html"><img class="fetures__img" src="img/fetured_1.jpg" alt="fetured1"></a>
-						<a href="single.html">
-							<p class="title">MANGO PEOPLE T-SHIRT</p>
-						</a>
-						<p class="cost">$52.00</p>
-						<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-					</div>
-					<div class="fetured__block">
-						<a href="#"><img class="fetures__img" src="img/fetured_2.jpg" alt="fetured1"></a>
-						<a href="#">
-							<p class="title">MANGO PEOPLE T-SHIRT</p>
-						</a>
-						<p class="cost">$52.00</p>
-						<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-					</div>
-					<div class="fetured__block">
-						<a href="#"><img class="fetures__img" src="img/fetured_3.jpg" alt="fetured1"></a>
-						<a href="#">
-							<p class="title">MANGO PEOPLE T-SHIRT</p>
-						</a>
-						<p class="cost">$52.00</p>
-						<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-					</div>
-					<div class="fetured__block">
-						<a href="#"><img class="fetures__img" src="img/fetured_4.jpg" alt="fetured1"></a>
-						<a href="#">
-							<p class="title">MANGO PEOPLE T-SHIRT</p>
-						</a>
-						<p class="cost">$52.00</p>
-						<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-					</div>
-					<div class="fetured__block">
-						<a href="#"><img class="fetures__img" src="img/fetured_5.jpg" alt="fetured1"></a>
-						<a href="#">
-							<p class="title">MANGO PEOPLE T-SHIRT</p>
-						</a>
-						<p class="cost">$52.00</p>
-						<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-					</div>
-					<div class="fetured__block">
-						<a href="#"><img class="fetures__img" src="img/fetured_6.jpg" alt="fetured1"></a>
-						<a href="#">
-							<p class="title">MANGO PEOPLE T-SHIRT</p>
-						</a>
-						<p class="cost">$52.00</p>
-						<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-					</div>
-					<div class="fetured__block">
-						<a href="#"><img class="fetures__img" src="img/fetured_7.jpg" alt="fetured1"></a>
-						<a href="#">
-							<p class="title">MANGO PEOPLE T-SHIRT</p>
-						</a>
-						<p class="cost">$52.00</p>
-						<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-					</div>
-					<div class="fetured__block">
-						<a href="#"><img class="fetures__img" src="img/fetured_8.jpg" alt="fetured1"></a>
-						<a href="#">
-							<p class="title">MANGO PEOPLE T-SHIRT</p>
-						</a>
-						<p class="cost">$52.00</p>
-						<a href="#" class="add"><img class="add__img" src="img/icon_basket_white.svg" alt="">Add to Cart</a>
-					</div>
-				</div>
+				<products ref="products" slice="8"></products>
 			</div>
 		</section>
 		<div class="browse-all">
@@ -511,7 +391,15 @@
 					<a href="index.html" class="soc white"><i class="fab fa-google-plus-g"></i></a> </div>
 			</div>
 		</footer>
+
 	</div>
+<!--Connect Vue and js-->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="js/ProductsComponent.js"></script>
+	<script src="js/CartComponent.js"></script>
+	<script src="js/dataError.js"></script>
+	<script defer src="js/main.js"></script>
+<!--/Connect Vue and js-->
 </body>
 
 </html>
