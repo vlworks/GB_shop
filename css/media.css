@@ -1,0 +1,50 @@
+@media (max-width: 1024px) {
+    .mega-container {
+        padding: 0 10px;
+    }
+    .drop_basket {
+        left: -216px !important;
+    }
+    .drop::before {
+        left: 228px !important;
+    }
+    .top__left, .top__right {
+        margin-bottom: 0px !important;
+    }
+    .intro__block {
+        margin: 50px 0 !important;
+    }
+    .fetured__text {
+        margin-bottom: 40px !important;
+    }
+    .fetured__block, .fetures__img {
+        width: 220px !important;
+    }
+    .fetured__block {
+        margin-top: 15px !important;
+    }
+    .browse-all {
+        margin: 10px 0px 20px !important;
+    }
+    .introF__block {
+        margin-top: 28px !important;
+        margin-left: 15px !important;
+    }
+    .introF {
+        margin-bottom: 25px !important;
+    }
+    .sub {
+        padding: 0 10px;
+        margin-bottom: 45px !important;
+    }
+    .preF__box {
+        margin-top: 0px !important;
+    }
+    footer {
+        padding: 0 10px;
+    }
+    .add {
+        bottom: 190px !important;
+        left: 40px !important;
+    }
+}
