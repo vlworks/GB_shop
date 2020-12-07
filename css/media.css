@@ -1,4 +1,4 @@
-@media (max-width: 1024px) {
+@media (max-width: 1399px) {
     .mega-container {
         padding: 0 10px;
     }
@@ -47,4 +47,51 @@
         bottom: 190px !important;
         left: 40px !important;
     }
+}
+
+@media (max-width: 1023px) {
+    .logo {
+        margin-right: 15px;
+    }
+    .browse {
+        display: none;
+    }
+    .form__search {
+        width: 280px !important;
+    }
+    .promo__box {
+        background-position: -190px !important;
+    }
+    .introF__block__right h2 {
+        font-size: 14px !important;
+      }
+      
+      .introF__block__right p {
+        font-size: 10px !important;
+        line-height: 22px !important;
+      }
+      .sub {
+          height: 200px !important;
+          padding-top: 45px;
+          margin-bottom: 25px !important;
+      }
+      .sub__left {
+          display: none !important;
+      }
+      .sub-flex {
+          justify-content: center;
+          align-items: center;
+      }
+      .sub__right__block {
+          margin: 0 0 !important;
+      }
+      .ftitle {
+          font-size: 14px !important;
+      }
+      .comp_link {
+          font-size: 14px !important;
+      }
+      .preF__box__brand {
+          max-width: 328px !important;
+      }
 }
